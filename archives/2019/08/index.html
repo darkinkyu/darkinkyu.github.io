@@ -1,75 +1,99 @@
-extends includes/layout.pug
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Archives: 2019/8 | Hexo</title>
 
-block content
-    div#tag
-        h1.article-sort-item.title= _p('page.articles') + ' - ' + site.posts.length
-        - var year
-        - page.posts.each(function(article){
-            - var tempYear = date(article.date, 'YYYY')
-            if tempYear !== year
-                - year = tempYear
-                .article-sort-item.year= year
-            .article-sort-item
-                if article.link
-                    time.article-time(datetime=date_xml(article.date))= date(article.date)
-                    a.article-link(href=url_for(article.link) target="_blank")
-                        = article.title || 'No Title'
-                else
-                    time.article-time(datetime=date_xml(article.date))= date(article.date)
-                    a.article-link(href=url_for(article.path))= article.title || 'No Title'
-        - })
-    include includes/pagination.pug
-    // - var categoriesList = list_categories({ show_count: false })
-    // - var tagsList = list_tags({ show_count: false })
-    // - var archivesList = list_archives({ show_count: false })
-    //
-    // div.archive
-    //     if !is_year()
-    //
-    //         h1 Archives
-    //
-    //         if theme.atom
-    //             p The feed is available via&nbsp;
-    //                 a(href=theme.atom) atom
-    //                 span .
-    //             br
-    //
-    //         aside
-    //             h2 Categories
-    //             if categoriesList
-    //                 != categoriesList
-    //             else
-    //                 p None.
-    //         br
-    //
-    //         aside
-    //             h2 Tags
-    //             if tagsList
-    //                 != tagsList
-    //             else
-    //                 p None.
-    //         br
-    //
-    //         aside
-    //             h2 Archives
-    //             if archivesList
-    //                 != archivesList
-    //             else
-    //                 p None.
-    //         br
-    //
-    //     else
-    //
-    //         h1= page.month + '/' + page.year
-    //
-    //         - page.posts.each(function(article){
-    //         .archive-list-item
-    //             if article.link
-    //                 a(href=url_for(article.link) target="_blank")= article.title || 'No Title'
-    //             else
-    //                 a(href=url_for(article.path))= article.title || 'No Title'
-    //             time(datetime=date_xml(article.date))= date(article.date)
-    //         - })
-    //         include includes/pagination.pug
-            //div!= paginator()
+  
+  <meta name="author" content="John Doe">
+  
 
+  
+
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="Hexo">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Hexo</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    
+
+<article>
+
+  <h2 class="article-title ">2019/8</h2>
+
+  <div class="archive">
+    
+      <div class="post archive">
+        <div class="archive-post">
+          <time datetime="2019-08-27T11:01:56.970Z">
+            <a href="/2019/08/27/hello-world/">2019-08-27</a>
+          </time>
+          
+            <h3 class="archive-title"><a href="/2019/08/27/hello-world/"><span>Hello World</span></a></h3>
+          
+        </div>
+      </div>
+    
+    <nav class="pagination">
+  
+  
+</nav>
+  </div>
+
+</article>
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2019 John Doe
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>
